@@ -1,4 +1,4 @@
-package org.wx.test;
+package org.wx.test.singleinstance;
 
 public class SingleInstance {
 
