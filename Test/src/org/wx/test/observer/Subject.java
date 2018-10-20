@@ -1,6 +1,6 @@
-package org.wx.test.observable;
+package org.wx.test.observer;
 
 public interface Subject {
-	public void register(Observer observer);
+	public void regiter(Observer observer);
 	public void unRegister(Observer observer);	
 }

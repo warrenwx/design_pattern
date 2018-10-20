@@ -1,4 +1,4 @@
-package nio;
+package org.wx.test.nio;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
