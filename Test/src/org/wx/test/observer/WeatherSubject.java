@@ -9,12 +9,28 @@ public class WeatherSubject implements Subject {
 	
 	private int temperature = 0;
 	private int humidityu 	= 0;
+	public void setTemperature(int temperature) {
+		this.temperature = temperature;
+		notifyObservers();
+	}
+
+	public void setHumidityu(int humidityu) {
+		this.humidityu = humidityu;
+		notifyObservers();
+	}
+
+	public void setPressure(int pressure) {
+		this.pressure = pressure;
+		notifyObservers();
+	}
+
 	private int pressure 	= 0;
 	
 	@Override
 	public void regiter(Observer observer) {
 		// TODO Auto-generated method stub
 		this.observers.add(observer);
+		notifyObservers();
 	}
 
 	@Override
@@ -25,7 +41,7 @@ public class WeatherSubject implements Subject {
 	
 	private void notifyObservers() {
 		for (Observer observer : observers) {
-			observer.update();
+			observer.update(temperature, humidityu, pressure);
 		}
 	}
 
