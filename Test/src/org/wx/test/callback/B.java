@@ -20,6 +20,6 @@ public class B {
 	
 	public void f(CallBack cb) {
 		System.out.println("B func execute something.");
-		System.out.println("A func execute something.");
+		cb.say();
 	}
 }
