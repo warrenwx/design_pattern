@@ -1,22 +1,9 @@
 package org.wx.test.singleinstance.serviceprovider;
 
 import java.util.Map;
-import java.util.PrimitiveIterator;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ServiceManager {
-	
-	public static class CustomProvider implements Provider{
-
-		@Override
-		public Service newService() {
-			return new Service() {
-				public void connect() {
-					System.out.println("connecting...");
-				}
-			};
-		}		
-	};
 	
 	public static Map<String, Provider> mp = new ConcurrentHashMap<>();
 	
@@ -38,10 +25,10 @@ public class ServiceManager {
 		ServiceManager.registerProvider("custom_service", provider);
 		
 		try {
-			Service cuService = ServiceManager.getInstance("custom_service1");
+			Service cuService = ServiceManager.getInstance("custom_service");
 			cuService.connect();
 		} catch (Exception e) {
-			System.out.println(e);
+			e.printStackTrace();
 		}
 		
 	}

@@ -1,7 +1,7 @@
 package org.wx.test.observer.pizzas;
 
 public class PizzaFactory {
-	public Pizza createPizza(String pizzaType){
+	public void createPizza(String pizzaType){
 		if (pizzaType == "newyorkstyle") {
 			System.out.println("newyork style pizza.");
 		}else if (pizzaType == "chicagostype") {

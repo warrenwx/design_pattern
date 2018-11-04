@@ -1,4 +1,4 @@
-import com.sun.jna.Callback;
+package org.wx.test.callback;
 
 /**
  * @ClassName:     B.java

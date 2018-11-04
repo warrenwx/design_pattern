@@ -1,3 +1,5 @@
+package org.wx.test.callback;
+
 /**
  * @ClassName:     CallBack.java
  * @Description:   TODO
